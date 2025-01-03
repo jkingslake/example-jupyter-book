@@ -11,6 +11,7 @@ class InvalidKindError(Exception):
 
 
 def get_random_ingredients(kind=None):
+
     """
     Return a list of random ingredients as strings.
 

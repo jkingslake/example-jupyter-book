@@ -6,6 +6,8 @@ title: Example Jupyter Book for Read the Docs
 author: Read the Docs team
 logo: logo.png
 
+only_build_toc_files: false
+
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
@@ -65,9 +67,11 @@ sphinx:
           "floor": ["\\lfloor#1\\rfloor", 1]
           "bmat": ["\\left[\\begin{array}"]
           "emat": ["\\end{array}\\right]"]
-        
+    "autodoc2_packages": ["../lumache.py"]  
+    "autodoc2_render_plugin": "md"
+  
   extra_extensions:
-    - sphinx.ext.autodoc
+    - autodoc2
     - sphinx.ext.napoleon # Enable support for NumPy and Google style docstrings
     - sphinx.ext.intersphinx
     - sphinx_inline_tabs
